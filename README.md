@@ -11,7 +11,7 @@ _Actual supported formats_ : .bsa
 - **-i** : Sets the input folder with an absolute path
 - **-o** : Sets the output folder with an absolute path
 - **-h** : Shows the header of the archive
-- **-v** : Verbose mode - prints every file to be extracted
+- **-v** : Verbose mode - prints every filepath to be extracted
 
 ## How to use
 - Put the Bethesda archive(s) you want to work with in this repository (_or use -i option_)
