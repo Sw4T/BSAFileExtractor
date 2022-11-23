@@ -19,7 +19,7 @@ _Actual supported formats_ : .bsa
 - Navigate to the path where you've cloned/downloaded this repository by typing ``cd PATH_TO_YOUR_FOLDER``
 - Execute the program by using the following syntax : 
 
-``python BSAFileExtractor.py ARCHIVE_NAME [-i "INPUT_FOLDER" | -o "OUTPUT_FOLDER" | -h | -v] file.txt file2.hkk ...``
+``python BSAFileExtractor.py ARCHIVE_NAME [-i "INPUT_FOLDER" | -o "OUTPUT_FOLDER" | -h | -v] file.txt file2.hkk``
 
 - By default, all files found will be extracted to the _/extracted_ folder of this repository
 
@@ -28,7 +28,7 @@ _Actual supported formats_ : .bsa
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" behavior00.hkx`` 
 #### To extract all files using multiple keywords
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" behavior00.hkx fullcharacter.txt draugr_bow.txt``
-#### To extract all files with a given input and output folder
+#### To extract all files matching a keyword with a given input and output folder
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" -i "D:/Steam/steamapps/common/Skyrim Special Edition/Data" -o "D:/Steam/skyrim_extract" behavior00.hkx``
 #### To extract multiple files while printing archive header and matching paths found
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" -v -h behavior00.hkx fullcharacter.txt``
