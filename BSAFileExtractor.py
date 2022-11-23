@@ -5,6 +5,8 @@
 # Options : 
 #   -i : sets the input folder where the BSA archives are, current folder is the default path
 #   -o : sets the output folder to given path, current folder is the default path
+#   -h : shows the archive header informations
+#   -v : prints every file to be extracted
 #
 # Example to extract one file : 
 #   python BSAFileExtractor.py "Skyrim - Animations.bsa" behavior00.hkx  
@@ -41,16 +43,19 @@ if not (sys.argv[1]).endswith(EXTENSION_FILES):
 it_args = 0
 for arg in sys.argv:
     if sys.argv[it_args] in OPTIONS:
-        match sys.argv[it_args]:
-            case '-i':
-                input_folder = Path(sys.argv[it_args]);
-            case '-o':
-                output_folder = Path(str(sys.argv[it_args]));
-                output_by_user = True
-            case '-h':
-                show_header = True
-            case '-v':
-                verbose = True
+        try:
+            match sys.argv[it_args]:
+                case '-i':
+                    input_folder = Path(str(sys.argv[it_args + 1]));
+                case '-o':
+                    output_folder = Path(str(sys.argv[it_args + 1]));
+                    output_by_user = True
+                case '-h':
+                    show_header = True
+                case '-v':
+                    verbose = True
+        except IndexError:
+            exit('Error : Please check the syntax of the options you are using')
     elif it_args > 1 and (sys.argv[it_args - 1] not in OPTIONS_WITH_ARG):
         list_filenames.append(arg)
     it_args += 1
