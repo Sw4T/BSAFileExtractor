@@ -21,6 +21,8 @@ _Actual supported formats_ : .bsa
 
 ``python BSAFileExtractor.py ARCHIVE_NAME [-i "INPUT_FOLDER" | -o "OUTPUT_FOLDER" | -h | -v] file.txt file2.hkk ...``
 
+- By default, all files found will be extracted to the _/extracted_ folder of this repository
+
 ## Examples
 #### To extract all files matching a keyword
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" behavior00.hkx`` 
