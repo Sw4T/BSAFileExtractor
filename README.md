@@ -22,13 +22,15 @@ _Actual supported formats_ : .bsa
 ``python BSAFileExtractor.py ARCHIVE_NAME [-i "INPUT_FOLDER" | -o "OUTPUT_FOLDER" | -h | -v] file.txt file2.hkk ...``
 
 ## Examples
-#### To extract one specific file 
+#### To extract all files matching a keyword
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" behavior00.hkx`` 
-#### To extract multiple files
+#### To extract all files using multiple keywords
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" behavior00.hkx fullcharacter.txt draugr_bow.txt``
-#### To extract a file with a given input and output folder
+#### To extract all files with a given input and output folder
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" -i "D:/Steam/steamapps/common/Skyrim Special Edition/Data" -o "D:/Steam/skyrim_extract" behavior00.hkx``
 #### To extract multiple files while printing archive header and matching paths found
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa" -v -h behavior00.hkx fullcharacter.txt``
+#### To extract a specific file
+``python BSAFileExtractor.py "Skyrim - Animations.bsa" meshes\clutter\blacksmith\blacksmithforge01\behaviors\behavior00.hkx``
 #### To extract all files from the archive
 ``python BSAFileExtractor.py "Skyrim - Animations.bsa"``
